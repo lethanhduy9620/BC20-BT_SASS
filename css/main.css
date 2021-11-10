@@ -408,12 +408,22 @@ header.wavyHeader.fixed #wavyNavbar ul.navbar-nav .nav-link {
   background-color: white;
   border-radius: 10px;
   min-height: 100%;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.wavyCards-content .card-item .img-container {
+  overflow: hidden;
 }
 
 .wavyCards-content .card-item .img-container img {
   width: 100%;
   height: auto;
   border-radius: 10px 10px 0px 0px;
+  -webkit-transition: -webkit-transform 650ms ease-in-out, -webkit-filter 650ms ease-in-out;
+  transition: -webkit-transform 650ms ease-in-out, -webkit-filter 650ms ease-in-out;
+  transition: transform 650ms ease-in-out, filter 650ms ease-in-out;
+  transition: transform 650ms ease-in-out, filter 650ms ease-in-out, -webkit-transform 650ms ease-in-out, -webkit-filter 650ms ease-in-out;
 }
 
 .wavyCards-content .card-item .card-content {
@@ -442,6 +452,16 @@ header.wavyHeader.fixed #wavyNavbar ul.navbar-nav .nav-link {
 
 .wavyCards-content .card-item .card-content p {
   margin-bottom: 0;
+}
+
+.wavyCards-content .card-item:hover .card-background {
+  -webkit-box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+}
+
+.wavyCards-content .card-item:hover .img-container img {
+  -webkit-transform: scale3d(1.05, 1.05, 1.05);
+          transform: scale3d(1.05, 1.05, 1.05);
 }
 
 @media screen and (max-width: 991.98px) {
@@ -793,5 +813,23 @@ footer img {
   -webkit-box-shadow: 0 0 0 1px #fff inset;
           box-shadow: 0 0 0 1px #fff inset;
   background-color: #b61984;
+}
+
+@media screen and (max-width: 991.98px) {
+  .footer-content {
+    width: 100%;
+    max-width: calc(100% - 40px);
+    padding: 0 20px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .footer-content {
+    width: 100%;
+    max-width: calc(100% - 20px);
+    padding: 0 10px;
+    margin: auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */

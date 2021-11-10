@@ -68,8 +68,8 @@ footer {
                     font-weight: 700;
                 }
 
-                a{
-                    &:hover{
+                a {
+                    &:hover {
                         color: $color-black-1;
                     }
                 }
@@ -91,7 +91,7 @@ footer {
                 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
                 a {
-                    &:hover{
+                    &:hover {
                         opacity: 0.8;
                     }
                     color: inherit;
@@ -135,5 +135,17 @@ footer {
                 background-color: $color-purple-1;
             }
         }
+    }
+}
+
+@include responsive("large-down") {
+    .footer-content {
+        @include layout-md-lg();
+    }
+}
+
+@include responsive("small-down") {
+    .footer-content {
+        @include layout-sm();
     }
 }
